@@ -33,6 +33,7 @@
   bottom: 0;
   border: 1px solid;
   border-image-source: linear-gradient(var(--accent-color), var(--accent-color)); 
+  pointer-events: none;
 }
 
 .decorated-zone::before {
@@ -71,9 +72,11 @@
   border-style: none;
   color: var(--accent-color);
   background-color: transparent;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
+  pointer-events: none; 
   border: 1px solid var(--accent-color);
 }
 
@@ -82,7 +85,7 @@
  }
  
  .header__theme-menu-button:focus {
-   outline: none;
+   outline-color: transparent;
  }
  
  .header__theme-menu-button:focus-visible {
@@ -91,7 +94,7 @@
 
 .header__title {
   color: var(--text-accent-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--logo-size);
   text-shadow: 4px 4px 0 var(--accent-color);
   font-weight: 700;
   line-height: 96px;
@@ -155,11 +158,11 @@
 }
 
 .article__link:hover {
- text-decoration: underline;
+  border-block-end: 1px solid var(--text-color);
 }
 
 .article__link:focus {
-  outline: none;
+  outline-color: transparent;
 }
 
 .article__link:focus-visible {
@@ -193,13 +196,18 @@
 
 .footer__title {
   color: var(--text-accent-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--logo-size);
   font-weight: 700;
   line-height: 96px;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 @media (min-width: 768px) {
+  
+  :root {
+    --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  
   .header {
     position: relative;
   }
