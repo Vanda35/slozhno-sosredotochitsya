@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-image: url("/images/cover-image.png");
+  background-image: url("../images/cover-image.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -19,7 +19,8 @@
 .decorated-zone {
   position: relative;
   min-width: 100%;
-  min-height: 100vh;
+  min-height: 668px;
+  max-height: 100vh;
 }
 
 .decorated-zone::before,
@@ -62,7 +63,9 @@
 }
 
 .header__theme-menu-button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font: 400;
   text-transform: lowercase;
   border-style: none;
