@@ -65,14 +65,6 @@
   pointer-events: none;
 }
 
-.title-decor {
-  color: var(--bg-color);
-}
-
-.content__title {
-  color: var(--accent-color);
-}
-
 .header__logo {
   position: relative;
 }
