@@ -17,42 +17,85 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .header__logo::before {
-    content: '';
+  :root {
+    --accent-color: #ff8dcb;
+    --text-accent-color: #ffc2e6;
+    --text-color: #353430;
+    --bg-color: #fff1f7;
+    background-image: url("../images/cover-image-light.png");
   }
-  
-  .header__logo::after {
-    content: '';
-    box-shadow: none;
-    width: 0;
-    height: 0;
-  }
-  
-  .header__theme-menu-button {
-    color: var(--text-color);
-  }
-  
-  .header__theme-menu-button_active {
-    border: 1px solid var(--text-color);
-  }
-  
-  .header__theme-menu-button:hover {
-    outline: 1px solid rgba(50, 49, 45, 0.4);
-  }
-  
-  .header__theme-menu-button:focus-visible {
-    border-block-end: 1px solid rgba(50, 49, 45, 0.4);
-  }
-  
-  .article__link:focus-visible {
-    outline: 1px solid var(--text-color);
-  }
-  
-  .title-decor {
-    color: var(--text-color);
-  }
-  
-  .content__title {
-    color: var(--text-color);
-  } 
+}
+
+.theme_light .header__logo::before {
+  content: "";
+}
+
+.theme_light .header__logo::after {
+  content: "";
+  box-shadow: none;
+  width: 0;
+  height: 0;
+}
+
+.theme_light .decorated-zone::before {
+  background: linear-gradient(
+        to right,
+        transparent 0,
+        transparent 0,
+        transparent calc(100% - 25px),
+        var(--text-color) 0
+      )
+      0 0 / 100% 1px no-repeat,
+    linear-gradient(
+        to right,
+        var(--text-color) 25px,
+        transparent 0,
+        transparent calc(100% - 25px),
+        transparent 0
+      )
+      0 100% / 100% 1px no-repeat,
+    linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 0,
+        transparent calc(100% - 25px),
+        var(--text-color) 0
+      )
+      0 0 / 1px 100% no-repeat,
+    linear-gradient(
+        to bottom,
+        var(--text-color) 25px,
+        transparent 0,
+        transparent calc(100% - 25px),
+        transparent 0
+      )
+      100% 0 / 1px 100% no-repeat;
+}
+
+.theme_light .header__theme-menu-button {
+  color: var(--text-color);
+}
+
+.theme_light .header__theme-menu-button_active {
+  border: 1px solid var(--text-color);
+}
+
+.theme_light .header__theme-menu-button:hover {
+  outline: 1px solid rgba(50, 49, 45, 0.4);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid rgba(50, 49, 45, 0.4);
+}
+
+.theme_light .article__link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.theme_light .title-decor {
+  color: var(--text-color);
+}
+
+.theme_light .content__title {
+  color: var(--text-color);
 }
