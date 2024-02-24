@@ -10,7 +10,6 @@
   background-color: var(--bg-color);
   font-family: IBM Plex mono, monospace;
   font-size: 18px;
-  padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 50px;
