@@ -12,6 +12,7 @@
   --accent-color: #ff8dcb;
   --text-accent-color: #ffc2e6;
   --text-color: #353430;
+  --decoration-color: #353430;
   --bg-color: #fff1f7;
   background-image: url("../images/cover-image-light.png");
 }
@@ -21,6 +22,7 @@
     --accent-color: #ff8dcb;
     --text-accent-color: #ffc2e6;
     --text-color: #353430;
+    --decoration-color: #353430;
     --bg-color: #fff1f7;
     background-image: url("../images/cover-image-light.png");
   }
@@ -35,41 +37,6 @@
   box-shadow: none;
   width: 0;
   height: 0;
-}
-
-.theme_light .decorated-zone::before {
-  background: linear-gradient(
-        to right,
-        transparent 0,
-        transparent 0,
-        transparent calc(100% - 25px),
-        var(--text-color) 0
-      )
-      0 0 / 100% 1px no-repeat,
-    linear-gradient(
-        to right,
-        var(--text-color) 25px,
-        transparent 0,
-        transparent calc(100% - 25px),
-        transparent 0
-      )
-      0 100% / 100% 1px no-repeat,
-    linear-gradient(
-        to bottom,
-        transparent 0,
-        transparent 0,
-        transparent calc(100% - 25px),
-        var(--text-color) 0
-      )
-      0 0 / 1px 100% no-repeat,
-    linear-gradient(
-        to bottom,
-        var(--text-color) 25px,
-        transparent 0,
-        transparent calc(100% - 25px),
-        transparent 0
-      )
-      100% 0 / 1px 100% no-repeat;
 }
 
 .theme_light .header__theme-menu-button {
