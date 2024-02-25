@@ -9,4 +9,6 @@
   --decoration-color: #ff0070;
   --bg-color: #000028;
   --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --padding: 10px;
+  --min-height: 668px;
 }
