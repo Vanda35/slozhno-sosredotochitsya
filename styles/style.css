@@ -6,7 +6,7 @@
   font-size: 18px;
   background-color: var(--bg-color);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-image: url("../images/cover-image.png");
+  background-image: url("../images/cover-image-dark.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -290,24 +290,24 @@
   }
 
   .content__title {
-    grid-row: 1 / 3;
+    grid-column: 1 / 1;
   }
 
   .article {
     gap: 10px;
-  }
-
-  .content:nth-of-type(3) .content__title {
-    grid-row: 1 / 7;
-  }
-
-  .content:nth-of-type(2) .content__title {
-    grid-column: 1 / 1;
-    grid-row: 1;
+    grid-column: 2 / 2;
   }
 
   .content:nth-of-type(2) .article {
     grid-column: span 2;
+  }
+
+  .content:nth-of-type(3) .content__title {
+    grid-row: span 2;
+  }
+
+  .special-title-decor {
+    grid-column: 2 / 2;
   }
 
   .gallery__list {
@@ -317,12 +317,14 @@
 
   .gallery {
     gap: 20px;
+    margin-block-end: 20px;
   }
 
   .gallery__image {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    display: block;
   }
 
   .gallery__list-item {
@@ -363,22 +365,24 @@
     justify-content: center;
   }
 
-  .special-title-decor {
-    grid-column: span 2;
-  }
-
-  .article {
-    grid-column: span 2;
-  }
-
   .content {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .article,
+  .special-title-decor {
+    grid-column: 2 / span 2;
+  }
+
+  .content:nth-of-type(2) .content__title {
+    grid-column: span 3;
+    max-width: 33%;
+  }
+
   .content:nth-of-type(2) .article {
     grid-column: auto;
-    grid-row: 2;
   }
+
 }
 
 @media (prefers-color-scheme: light) {
@@ -388,6 +392,6 @@
     --text-color: #353430;
     --decoration-color: #353430;
     --bg-color: #fff1f7;
-    background-image: url("../images/cover-image-light.png");
+    --background-image: url("../images/cover-image-light.png")
   }
 }
