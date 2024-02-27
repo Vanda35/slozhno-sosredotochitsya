@@ -4,6 +4,7 @@
 */
 :root {
   --accent-color: #ff0070;
+  --shadow-color: #FF0070;
   --text-accent-color: #DB00FF;
   --text-color: #F1B2CE;
   --decoration-color: #ff0070;
@@ -11,4 +12,8 @@
   --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --padding: 10px;
   --min-height: 668px;
+  --bg-image: url("../images/cover-image-dark.png");
+  --display-decoration: visible;
+  --hover-color: rgba(255, 0, 112, 0.4);
+  --title-color: #000028;
 }

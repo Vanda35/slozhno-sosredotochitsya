@@ -3,6 +3,21 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root.theme_dark {
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
+  --accent-color: #ff0070;
+  --text-accent-color: #db00ff;
+  --text-color: #f1b2ce;
+  --decoration-color: #ff0070;
+  --bg-color: #000028;
+  --bg-image: url("../images/cover-image-dark.png");
+  --display-decoration: visible;
+  --border-color: rgba(255, 0, 112, 0.4);
+  --title-color: #000028;
+}
 
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
@@ -10,10 +25,44 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #ff0070;
-  --text-accent-color: #DB00FF;
-  --text-color: #F1B2CE;
+  --text-accent-color: #db00ff;
+  --text-color: #f1b2ce;
   --decoration-color: #ff0070;
   --bg-color: #000028;
-  background-image: url("../images/cover-image-dark.png");
+  --bg-image: url("../images/cover-image-dark.png");
+  --display-decoration: visible;
+  --hover-color: rgba(255, 0, 112, 0.4);
+  --title-color: #000028;
 }
 
+.header__logo::before {
+  content: "rec";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: calc(100% - 60px);
+  visibility: var(--display-decoration);
+  margin-inline-end: 29px;
+  color: var(--decoration-color);
+  text-transform: uppercase;
+}
+
+.header__logo::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  bottom: 0;
+  left: calc(100% - 18px);
+  visibility: var(--display-decoration);
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 9px;
+  height: 9px;
+  margin-inline-end: 8px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--decoration-color);
+  background: var(--decoration-color);
+}
