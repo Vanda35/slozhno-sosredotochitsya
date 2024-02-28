@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  padding: var(--padding);
+  padding: 0 var(--padding);
   font-family: IBM Plex mono, monospace;
   font-size: 18px;
   background-color: var(--bg-color);
@@ -15,17 +15,18 @@
 
 .decorated-zone {
   position: relative;
+  padding: var(--padding) 0;
   min-width: 100%;
-  min-height: calc(var(--min-height) - 2 * var(--padding));
+  min-height: var(--min-height);
   max-height: 100vh;
 }
 
 .decorated-zone::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 0;
-  bottom: 0;
+  bottom: 10px;
   left: 0;
   background: linear-gradient(
         to right,
@@ -185,7 +186,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  margin: 50px 0px;
+  margin: 40px 0px;
 }
 
 .content {
@@ -217,7 +218,7 @@
 
 .article__link {
   text-decoration: none;
-  text-shadow: 1px 1px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .article__link:hover {
@@ -272,6 +273,11 @@
     --min-height: 1024px;
   }
 
+  .decorated-zone::before {
+    top: 20px;
+    bottom: 20px;
+  }
+
   .header__text {
     max-width: 50%;
   }
@@ -285,7 +291,7 @@
 
   .main {
     gap: 80px;
-    margin: 80px 0px 60px;
+    margin: 60px 0px 40px;
   }
 
   .content {
@@ -301,11 +307,11 @@
     gap: 10px;
   }
 
-  .content:nth-of-type(2) .article {
+  .not-typcal-content .article {
     grid-column: span 2;
   }
 
-  .content:nth-of-type(3) .content__title {
+  .special-content__title {
     grid-row: span 2;
   }
 
@@ -366,21 +372,28 @@
     justify-content: center;
   }
 
+  .header__text {
+    margin-block-start: var(--padding);
+  }
+
   .content {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .article,
+  .article {
+    grid-column: 2 / span 2;
+  }
+
   .special-title-decor {
     grid-column: 2 / span 2;
   }
 
-  .content:nth-of-type(2) .content__title {
+  .not-typcal-content .content__title {
     grid-column: span 3;
     max-width: 33%;
   }
 
-  .content:nth-of-type(2) .article {
+  .not-typcal-content .article {
     grid-column: auto;
   }
 }
