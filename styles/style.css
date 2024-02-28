@@ -15,10 +15,10 @@
 
 .decorated-zone {
   position: relative;
-  padding: var(--padding) 0;
   min-width: 100%;
   min-height: var(--min-height);
   max-height: 100vh;
+  padding: var(--padding) 0;
 }
 
 .decorated-zone::before {
@@ -137,8 +137,8 @@
 }
 
 .header__theme-menu-button_active {
-  pointer-events: none;
   border: 1px solid var(--decoration-color);
+  pointer-events: none;
 }
 
 .header__theme-menu-button:focus {
