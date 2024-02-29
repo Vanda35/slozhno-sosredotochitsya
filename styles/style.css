@@ -16,6 +16,7 @@
 .decorated-zone {
   position: relative;
   min-width: 100%;
+  min-height: var(--min-height);
   height: 100vh;
   padding: var(--padding) 0;
 }
@@ -269,6 +270,7 @@
   :root {
     --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     --padding: 20px;
+    --min-height: 1024px;
   }
 
   .decorated-zone::before {
@@ -357,6 +359,7 @@
 @media (min-width: 1024px) {
   :root {
     --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --min-height: 768px;
   }
 
   .header__theme-menu {
